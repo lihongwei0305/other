@@ -155,7 +155,18 @@ export default defineComponent({
                 // bpmnAutoResize: ['value', ''],
                 // bpmnAutoResizeProvider: ['value', ''],
                 // bendpointSnapping: ['value', ''],
-                // bendpointMovePreview: ['value', '']
+                // bendpointMovePreview: ['value', ''],
+
+                // 禁用左侧默认工具栏
+                // paletteProvider: ['value', ''], // 去不干净，还是默认生成空白 dom
+                // // zoomScroll: ['value', ''], // 禁用滚轮滚动
+                // bendpoints: ['value', ''], // 禁止拖动线
+                // contextPadProvider: ['value', ''], // 禁止点击节点出现contextPad
+                // labelEditingProvider: ['value', ''], // 禁止双击节点出现label编辑框
+                // move: ['value', ''], // 禁用单个图形拖动,
+                // selectionVisuals: ['value', ''],
+                // selectionBehavior: ['value', ''],
+
               }
             ]
             :
