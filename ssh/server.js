@@ -6,7 +6,7 @@ export const server = [
             port: 22,
             username: 'root',
             password: 'admin',
-            path: '/test',
+            path: '/usr/share/nginx/html',
         }
     },
     {

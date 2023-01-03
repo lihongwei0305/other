@@ -9,11 +9,17 @@ export function connectSsh(server, cmd) {
     const spinner = ora('连接服务器...').start();
     conn.on("ready", () => {
         spinner.succeed("连接服务器成功!")
+        //shopt -s  extglob
+        //  rm -rf !\(dist.zip\);
+        // find * | grep -v '\(dist.zip\)' | xargs rm -rf
+        let a = '(dist.zip)'
         if (!cmd) {
             cmd = `
                     cd ${server.path};
+                    shopt -s  extglob;
+                    rm -rf !'\(dist.zip\)';
                     unzip -o dist.zip;
-                    rm -rf dist.zip 
+                    rm -rf dist.zip
                     `
         }
         conn.exec(cmd, (err, stream) => {
